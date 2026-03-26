@@ -1,5 +1,8 @@
 let chart;
 
+// Load portfolio on page load
+window.addEventListener('DOMContentLoaded', loadPortfolio);
+
 // 🔔 Toast Notification
 function showToast(message) {
     const toast = document.getElementById("toast");

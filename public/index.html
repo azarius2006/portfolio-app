@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <h1>📊 Portfolio Dashboard</h1>
+
+    <!-- INPUT CARD -->
+    <div class="card input-card">
+        <input type="text" id="name" placeholder="Stock Name">
+        <input type="number" id="price" placeholder="Price">
+        <input type="number" id="quantity" placeholder="Quantity">
+
+        <div class="btn-group">
+            <button onclick="addStock()">Add</button>
+            <button onclick="buyStock()">Buy</button>
+            <button onclick="sellStock()">Sell</button>
+        </div>
+
+        <button class="view-btn" onclick="loadPortfolio()">Refresh Dashboard</button>
+    </div>
+
+    <!-- STATS -->
+    <div id="stats" class="stats"></div>
+
+    <!-- CHART -->
+    <div class="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div id="output" class="grid"></div>
+
+</div>
+
+<script src="script.js"></script>
+<div id="toast"></div>
+</body>
+</html>
